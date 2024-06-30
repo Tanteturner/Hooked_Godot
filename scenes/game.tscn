@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://57b3rl7ata77"]
+
+[ext_resource type="PackedScene" uid="uid://dqexxgemdttku" path="res://scenes/player.tscn" id="1_uo3ei"]
+[ext_resource type="Texture2D" uid="uid://cmdgnd7bktrwa" path="res://assets/tiles/grass/tileset_grass.png" id="2_my8lg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tk7an"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5l3f"]
+size = Vector2(71.4421, 70.1862)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_tk7an")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_uo3ei")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -73)
+zoom = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.5, 146.5)
+scale = Vector2(3.1875, 3.6625)
+texture = ExtResource("2_my8lg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(80.4706, -43.2765)
+scale = Vector2(0.546346, 0.458191)
+texture = ExtResource("2_my8lg")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sprite2D"]
+position = Vector2(80.4706, -43.2765)
+scale = Vector2(0.546346, 0.458191)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D2"]
+position = Vector2(-52.3736, -4.70204)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_w5l3f")
