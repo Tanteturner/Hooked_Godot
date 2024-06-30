@@ -1,17 +1,17 @@
 extends CharacterBody2D
 
-const WALK_ACCELERATION = 1000.0
+const WALK_ACCELERATION = 1200.0
 const WALK_DECCELERATION = 1200.0
 const MAX_WALK_VELOCITY = 150.0
 const AIR_ACCELERATION = 1000.0
 const AIR_DECCELERATION = 700.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -200.0
 const WALL_JUMP_VELOCITY = 200.0
 const COYOTE_TIME = 0.1
 const REMEMBER_INPUT_TIME = 0.1
-const JUMP_GRAVITY = 1
-const FALL_GRAVITY = 1.5
-const WALL_GRAVITY = 1.5
+const JUMP_GRAVITY = 0.6
+const FALL_GRAVITY = 1
+const WALL_GRAVITY = 1
 const MAX_WALLSLIDE_VELOCITY = 20
 
 @onready var animated_sprite = $AnimatedSprite2D

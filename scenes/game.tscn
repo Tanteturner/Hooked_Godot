@@ -42,7 +42,6 @@ scale = Vector2(0.546346, 0.458191)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D2"]
 position = Vector2(-52.3736, -4.70204)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_w5l3f")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
@@ -51,5 +50,4 @@ scale = Vector2(2.076, 1.741)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(-52.3736, -4.70204)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_w5l3f")
